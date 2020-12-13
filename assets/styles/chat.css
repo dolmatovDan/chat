@@ -8,34 +8,6 @@
 	border: 1px solid #eaedf3;
 }
 
-.chat__message {
-	display: inline-block;
-	padding: 11px 7px 9px 14px;
-	border-radius: 5px;
-	background-color: #5965db;
-	max-width: 420px;
-	word-break: break-word;
-	margin-bottom: 15px;
-}
-
-.chat__add-icon {
-	width: 22px;
-	height: 22px;
-	background-color: red;
-	border-radius: 50%;
-}
-
-.chat__message--my {
-	background-color: #f4f4f4;
-	align-self: flex-end;
-}
-
-.chat__message--friend {
-	color: #fff;
-	background-color: #5965db;
-	align-self: flex-start;
-}
-
 .chat__dialogue {
 	display: flex;
 	flex-direction: column;
