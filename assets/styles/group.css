@@ -1,0 +1,66 @@
+.dialogues__groups {
+	height: 100%;
+	width: 100%;
+	border-bottom: 1px solid #eaedf3;
+	display: flex;
+	flex-direction: column;
+}
+
+.group {
+	width: 100%;
+	height: 116px;
+	border-bottom: 1px solid #eaedf3;
+	padding: 30px 24px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.group__icons {
+	position: relative;
+	width: 53px;
+	height: 55px;
+}
+
+.group__icon {
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-color: red;
+}
+
+.group__icon:nth-child(1) {
+	top: 0;
+	left: 0;
+}
+
+.group__icon:nth-child(2) {
+	bottom: 0;
+	right: 0;
+	background-color: green;
+	border: 2px solid #fff;
+}
+
+.group__text {
+	width: 180px;
+	margin-right: 30px;
+}
+
+.group__title {
+	font-size: 17px;
+	color: #323E4A;
+}
+
+.group__subtitle {
+	font-size: 14.5px;
+	color: #51606D;
+}
+
+.group--line {
+	background-color: #5965DB;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}

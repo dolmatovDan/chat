@@ -1,7 +1,14 @@
+.chat-widnow {
+	height: 953px;
+	width: 1280px;
+	display: flex;
+
+}
+
 .chat {
 	width: 685px;
 	background-color: #f8fafd;
-	height: 953px;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
