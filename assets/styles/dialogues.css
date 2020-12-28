@@ -1,7 +1,8 @@
 .dialogues {
-	height: 100%;
+	height: 100vh;
 	width: 341px;
-	background-color: #fff; 
+	overflow: auto;
+	background-color: #fff;
 	display: flex;
 	flex-direction: column;
 }
