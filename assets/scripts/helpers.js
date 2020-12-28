@@ -20,6 +20,10 @@ function genRandom(num) {
 	return Math.floor(Math.random() * num);
 }
 
+function genRandomInRange(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
 function createDate() {
 	const date = new Date();
 	let hours = date.getHours();

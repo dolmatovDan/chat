@@ -14,6 +14,7 @@
 	display: flex;
 	justify-content: space-between;
 	position: relative;
+	border-left: 6px solid transparent;
 }
 
 .group__icons {
@@ -57,10 +58,8 @@
 	color: #51606D;
 }
 
-.group--line {
-	background-color: #5965DB;
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
+.group--click {
+	border-left: 6px solid #5965DB;
+	background-color: #F6F9FF;
 }
+

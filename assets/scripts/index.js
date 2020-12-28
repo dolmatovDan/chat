@@ -1,6 +1,7 @@
 const chat = document.getElementById('chat');
 const messageButton = document.getElementById('messageButton');
 const messageInput = document.getElementById('messageInput');
+const groups = document.querySelector('.dialogues__groups');
 const messagesQueue = [];
 const phrases = ['Hi Justin! We just wanted to welcome you to our team.',
 				'We are all excited to have you, we loved the work that you showed us during your interview and you fit well with everyone on our team and company. If you have any questions feel free to ask and someone on the team will help you out.',
@@ -20,45 +21,38 @@ const senders = [{
 }];
 
 
-function createMessage(text, status, id, logo) { //заменить на объект
+function createMessage({text, status, id, logo}) { //заменить на объект
 	const container = createElement('div', 'message-holder');
 	const senderInfo = createSenderInfo(id, logo);
 
 	const elem = createElement('div', [`message--${status}`, 'message']);
 	elem.innerText = text;
-	const shouldShowName1 = status === 'friend' && messagesQueue.length === 0; //Попробовать переработать
-	const shouldShowName2 = status === 'friend' && messagesQueue.length !== 0 && messagesQueue[messagesQueue.length - 1].id !== id; //Попробовать переработать 
-	if (shouldShowName1 ||  shouldShowName2) {
+	//const shouldShowName1 = status === 'friend' && messagesQueue.length === 0; //Попробовать переработать
+	const shouldShowName2 = status === 'friend' && messagesQueue[messagesQueue.length - 1].id !== id; //Попробовать переработать 
+	if (shouldShowName2) {
 		container.prepend(senderInfo);
 	}
 	container.append(elem);
 	return container;
 }
 
-function createSenderInfo(surName, logo) {
-	const container = createElement('div', 'message-container');
-	const containerSender = createElement('div', 'message__sender');
-	const icon = createElement('div', 'message__icon');
-	const name = createElement('div', 'message__name');
-	const time = createElement('span', 'message__time');
 
-	time.innerText = createDate();
 
-	name.innerText = surName;
-	icon.style.backgroundImage = `url(${logo})`;
-	containerSender.append(icon, name);
-	container.append(containerSender, time);
-	return container;
-}
-
-function createAndSendMessage(text, status, id, logo) { //заменить на объект
-	if (chat) {
-		chat.append(createMessage(text, status, id, logo));
-	} else {
-		console.warn('Нету переменной chat');
+groups.addEventListener('click', (e) => {
+	const targetElem = e.target;
+	const parent = targetElem.closest('.group');
+	const arrElem = document.querySelectorAll('.group');
+	if (!parent) {
+		return;
 	}
-}
-
+	for(let i = 0; i < arrElem.length; i++) {
+		arrElem[i].classList.remove('group--click');
+	}
+	if (parent) {
+		
+		parent.classList.add('group--click');
+	}
+})
 
 messageButton.addEventListener('click', () => {
 	prepareAndSendMessage(messageInput.value);
@@ -74,12 +68,16 @@ function sendFriendMessage() {
 
 	const message = phrases[genRandom(phrases.length)]; 
 	const {id, icon} = senders[genRandom(senders.length)]; 
-	createAndSendMessage(message, 'friend', id, icon);
+	createAndSendMessage({
+		text: message,
+		status: 'friend',
+		id,
+		logo: icon
+	});
 	messagesQueue.push({
 		id,
 		message,
 	})
-	
 }
 
 function prepareAndSendMessage(text) {
@@ -88,13 +86,14 @@ function prepareAndSendMessage(text) {
 			return;
 		}
 
-		createAndSendMessage(text, 'my', 'me');
+		createAndSendMessage({text, status:'my', id:'me', logo:''});
 		messagesQueue.push({
 			id: 'me',
 			message: text,
 		});
-		sendFriendMessage();
-		sendFriendMessage();
+		const timeout = genRandomInRange(1000, 5000);
+		setTimeout(sendFriendMessage, timeout);
+		setTimeout(sendFriendMessage, genRandomInRange(timeout + 1000, timeout + 3000));
 		messageInput.value = "";
 }
 
