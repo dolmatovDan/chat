@@ -1,12 +1,12 @@
 .chat-widnow {
-	height: 953px;
+	height: 100vh;
 	width: 1280px;
+	margin: 0 auto;
 	display: flex;
-
 }
 
 .chat {
-	width: 685px;
+	flex-grow: 1;
 	background-color: #f8fafd;
 	height: 100%;
 	display: flex;
@@ -19,6 +19,8 @@
 	display: flex;
 	flex-direction: column;
 	padding: 30px;
+	max-height: 100%;
+	overflow: auto;
 }
 
 .chat__container {
@@ -44,7 +46,7 @@
 	margin-right: 20px;
 	background-image: url(../img/Picture-Icon.png);
 	background-repeat: no-repeat;
-	background-size: cover; 
+	background-size: cover;
 	flex-shrink: 0;
 }
 
