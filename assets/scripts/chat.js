@@ -19,6 +19,8 @@ const senders = [
     }
 ];
 
+
+
 class Chat {
     constructor(settings) {
         this.chat = document.getElementById(Chat.IDs.chatId);

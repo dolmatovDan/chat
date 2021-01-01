@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/overrides.css">
+	<link rel="stylesheet" type="text/css" href="./assets/scss/style.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/chat.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/button.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/message.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/group.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/dialogues.css">
 </head>
+
 <body>
 	<div class="chat-widnow">
 		<div class="dialogues">
@@ -111,25 +114,25 @@
 						<div class="header__icon"></div>
 						<div class="header__icon"></div>
 						<div class="header__icon"></div>
-						<div class="header__icon"></div>
+						<button class="button header__icon"></button>
 					</div>
 
 					<div class="header__funcs">
-						<div class="header__func"></div>
-						<div class="header__func"></div>
-						<div class="header__func"></div>
+						<button class="button header__func"></button>
+						<button class="button header__func"></button>
+						<button class="button header__func"></button>
 					</div>
 				</div>
 			</div>
 			<div class="chat__dialogue" id="chat"></div>
 
 			<div class="chat__container">
-				<input placeholder ="Type a message. . ." type="text" id="messageInput" class="chat__messageInput">
+				<input placeholder="Type a message. . ." type="text" id="messageInput" class="chat__messageInput">
 
 				<div class="chat__send-place">
-					<div class="chat__icon"></div>
-					<div class="chat__icon"></div>
-					<button id="messageButton" class="button">Send message</button>
+					<button class="chat__icon button"></button>
+					<button class="chat__icon button"></button>
+					<button id="messageButton" class="button button--send">Отправить</button>
 				</div>
 			</div>
 		</div>
@@ -146,4 +149,5 @@
 	<script type="text/javascript" src="assets/scripts/socialNetwork.js"></script>
 	<script type="text/javascript" src="assets/scripts/Help.js"></script>
 </body>
+
 </html>

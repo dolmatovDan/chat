@@ -5,6 +5,7 @@
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
+	border-left: 1px solid #eaedf3;
 }
 
 .dialogues__header {
