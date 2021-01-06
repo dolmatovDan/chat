@@ -14,7 +14,7 @@ class SocialNetwork {
                 return;
             }
             const dialogueId = parent.getAttribute('data-id');
-            
+
             // CSS-магия активного диалога (лучше обработчики одного элемента держать вместе)
             const arrElem = document.querySelectorAll('.group');
             for (let i = 0; i < arrElem.length; i++) {
@@ -28,10 +28,8 @@ class SocialNetwork {
     }
 
     toggleChat(dialogueId) {
-        if (this.chat.id) {
-            this.dialogues[this.chat.id] = this.chat.messagesQueue || [];
-            this.chat.destroy();
-        }
+        this.dialogues[this.chat.id] = this.chat.messagesQueue || [];
+        this.chat.destroy();
 
         this.chat.init({id: dialogueId, messages: this.dialogues[dialogueId]});
     }

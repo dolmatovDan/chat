@@ -50,7 +50,7 @@ class Chat {
                     status: 'friend',
                     id: item.id,
                     logo: data.icon
-                });
+                }, false);
             }
         })
     }
@@ -120,9 +120,9 @@ class Chat {
         this.messageInput.value = "";
     }
 
-    createAndSendMessage(obj) {
+    createAndSendMessage(obj, isNew = true) {
         if (this.chat) {
-            this.chat.append(this.createMessage(obj));
+            this.chat.append(this.createMessage(obj, isNew));
         } else {
             console.warn('Нету переменной chat');
         }
@@ -144,14 +144,14 @@ class Chat {
         return container;
     }
 
-    createMessage({text, status, id, logo}) {
+    createMessage({text, status, id, logo}, isNew = true) {
         const container = Helpers.createElement('div', 'message-holder');
         const senderInfo = this.createSenderInfo(id, logo);
 
         const elem = Helpers.createElement('div', [`message--${status}`, 'message']);
         elem.innerText = text;
-        const shouldShowName = status === 'friend' && this.messagesQueue[this.messagesQueue.length - 1]?.id !== id;
-        if (shouldShowName) {
+        const shouldShowName = status === 'friend' && (this.messagesQueue[this.messagesQueue.length - 1].id !== id);
+        if (status === 'friend' && !isNew || shouldShowName) {
             container.prepend(senderInfo);
         }
         container.append(elem);
