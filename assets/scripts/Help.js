@@ -2,8 +2,8 @@ class Helpers {
 	static createElement(name, classes, atributs = {}) {
 		const elem = document.createElement(name);
 		if (Array.isArray(classes)) {
-			for (let i = 0; i < classes.length; i ++) {
-				elem.classList.add(classes[i]);
+			for (let i = 0; i < classes.length; i++) {
+				classes[i] && elem.classList.add(classes[i]);
 			}
 		} else {
 			elem.classList.add(classes);

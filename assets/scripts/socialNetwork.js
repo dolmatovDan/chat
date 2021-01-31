@@ -3,7 +3,7 @@ class SocialNetwork {
         this.groups = document.getElementById('groups');
         this.addListeners();
         this.dialogues = {};
-        this.chat = new Chat({id: 0, messages: this.dialogues[0] || []});
+        this.chat = new Chat({ id: 0, messages: this.dialogues[0] || [] });
     }
 
     addListeners() {
@@ -31,9 +31,8 @@ class SocialNetwork {
         this.dialogues[this.chat.id] = this.chat.messagesQueue || [];
         this.chat.destroy();
 
-        this.chat.init({id: dialogueId, messages: this.dialogues[dialogueId]});
+        this.chat.init({ id: dialogueId, messages: this.dialogues[dialogueId] });
     }
-
 }
 
 new SocialNetwork();

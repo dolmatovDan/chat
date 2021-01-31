@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/overrides.css">
+	<link rel="stylesheet" href="./assets/styles/modals.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/chat.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/button.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/message.css">
@@ -14,6 +15,24 @@
 </head>
 
 <body>
+	<div class="modal" id="modal">
+		<div class="modal__window">
+			<div class="modal__container">
+				<h3 class="modal__title">Войти в учётную запись</h3>
+				<label for="" class="modal__label"><input checked id="user" type="radio" name="modal"
+						class="modal__input">Пользователь</label>
+				<label class="modal__label" for=""><input type="radio" id="admin" class="modal__input"
+						name="modal">Админ</label>
+
+				<div class="modal__auth">
+					<input type="text" id="login" placeholder="Введите логин" class="modal__input">
+					<input type="password" id="password" placeholder="Введите логин"
+						class="modal__input modal__password">
+					<button class="button button--auth" id="btn-auth">Войти</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="chat-widnow">
 		<div class="dialogues">
 			<div class="dialogues__header">
@@ -145,6 +164,7 @@
 
 
 	<script type="text/javascript" src="assets/scripts/chat.js"></script>
+	<script type="text/javascript" src="assets/scripts/auth.js"></script>
 	<script type="text/javascript" src="assets/scripts/socialNetwork.js"></script>
 	<script type="text/javascript" src="assets/scripts/Help.js"></script>
 </body>
