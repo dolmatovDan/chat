@@ -32,13 +32,14 @@
 	cursor: pointer;
 	right: 30px;
 	position: fixed;
+	font-size: 18px;
 	
 }
 
 .button-open {
 	cursor: pointer;
 	position: fixed;
-	right: 45px;
+	right: 30px;
 }
 
 .button--hidden {
