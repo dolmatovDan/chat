@@ -1,0 +1,19 @@
+.console {
+    font-family: 'JetBrains Mono', monospace;
+    color: #fff;
+    padding: 20px;
+    overflow: scroll;
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: #000;
+    font-size: 14px;
+}
+
+.console__input {
+    border: none;
+    background-color: transparent;
+    
+}

@@ -1,0 +1,56 @@
+.console {
+    font-family: 'JetBrains Mono', monospace;
+    color: #fff;
+    padding: 15px;
+    overflow: auto;
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: #000;
+    
+    &__input {
+        font-family: 'JetBrains Mono', monospace;
+        background-color: transparent;
+        border: none;
+        color: inherit;
+        width: 100%;
+        font-size: 12px;
+
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+
+    &__text {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+
+        &::before {
+            display: inline-block;
+            content: 'admin@chat: ';
+            white-space: pre;
+        }
+    }
+    
+    &__label {
+        &::before {
+            display: inline-block;
+            content: 'admin@chat: ';
+            white-space: pre;
+            font-size: 12px;
+        }
+        align-items: center;
+        display: flex;
+    }
+
+    &--minV {
+        height: 50px;
+        transition: all 0.2s;
+    }
+    &-return-scale {
+        height: 400px;
+        transition: all 0.2s;
+    }
+}

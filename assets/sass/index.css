@@ -1,0 +1,65 @@
+.console {
+  font-family: 'JetBrains Mono', monospace;
+  color: #fff;
+  padding: 15px;
+  overflow: auto;
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: #000;
+}
+
+.console__input {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  width: 100%;
+  font-size: 12px;
+}
+
+.console__input:active, .console__input:focus {
+  outline: none;
+}
+
+.console__text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+
+.console__text::before {
+  display: inline-block;
+  content: 'admin@chat: ';
+  white-space: pre;
+}
+
+.console__label {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.console__label::before {
+  display: inline-block;
+  content: 'admin@chat: ';
+  white-space: pre;
+  font-size: 12px;
+}
+
+.console--minV {
+  height: 50px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.console-return-scale {
+  height: 400px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/*# sourceMappingURL=index.css.map */

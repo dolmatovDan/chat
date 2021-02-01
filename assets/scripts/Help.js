@@ -10,7 +10,7 @@ class Helpers {
 		}
 
 
-		for (key in atributs) {
+		for (let key in atributs) {
 			elem.setAttribute(key, atributs[key]);
 		}
 

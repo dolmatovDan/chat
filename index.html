@@ -12,10 +12,18 @@
 	<link rel="stylesheet" type="text/css" href="./assets/styles/message.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/group.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/dialogues.css">
+	<link rel="stylesheet" type="text/css" href="./assets/sass/index.css">
+
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<div class="modal" id="modal">
+	<!-- <div class="modal" id="modal">
 		<div class="modal__window">
 			<div class="modal__container">
 				<h3 class="modal__title">Войти в учётную запись</h3>
@@ -32,7 +40,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="chat-widnow">
 		<div class="dialogues">
 			<div class="dialogues__header">
@@ -156,6 +164,15 @@
 		</div>
 	</div>
 
+	<div id="console" class="console">
+		<i id="button-close" class="button-close far fa-times-circle"></i>
+		<i id="button-open" class="button-open button--hidden fas fa-external-link-alt"></i>
+		<div class="console__commands" id="commands-place"></div>
+		<label class="console__label">
+			<input id="input" type="text" class="console__input">
+		</label>
+	</div>
+
 
 
 
@@ -167,6 +184,7 @@
 	<script type="text/javascript" src="assets/scripts/auth.js"></script>
 	<script type="text/javascript" src="assets/scripts/socialNetwork.js"></script>
 	<script type="text/javascript" src="assets/scripts/Help.js"></script>
+	<script type="text/javascript" src="assets/scripts/console.js"></script>
 </body>
 
 </html>

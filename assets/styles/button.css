@@ -27,3 +27,20 @@
 	background-color: #5965DB;
 	color: #FFF;
 }
+
+.button-close {
+	cursor: pointer;
+	right: 30px;
+	position: fixed;
+	
+}
+
+.button-open {
+	cursor: pointer;
+	position: fixed;
+	right: 45px;
+}
+
+.button--hidden {
+	transform: scale(0);
+}
